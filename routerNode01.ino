@@ -85,11 +85,11 @@ void loop()
     
     rf24.write(&sentDataR, sizeof(sentDataR));
     Serial.print("Sent data node 1 to Gateway at");
-    Serial.println(sentData.jam);
+    Serial.println(sentDataR.jam);
     Serial.print(":");
-    Serial.print(sentData.menit);
+    Serial.print(sentDataR.menit);
     Serial.print(":");
-    Serial.print(sentData.detik);
+    Serial.print(sentDataR.detik);
     Serial.println();
     delay(1000);
   }
