@@ -117,7 +117,7 @@ void loop()
         Serial.println(now.second());
         Serial.println();
         
-        if(currentMillis % interval >= 3000 && currentMillis % interval <= 6000){
+        if (currentMillis % interval >= 3000 && currentMillis % interval <= 6000){
           sentData.tandanode = receivedData.tandanode;
           sentData.temperature = receivedData.temperature;
           sentData.humidity = receivedData.humidity;
@@ -162,7 +162,7 @@ void loop()
         Serial.println(now.second());
         Serial.println();
         
-        if(currentMillis % interval >= 12000 && currentMillis % interval <= 15000){
+        if (currentMillis % interval >= 12000 && currentMillis % interval <= 15000){
         
           sentData.tandanode = receivedData.tandanode;
           sentData.temperature = receivedData.temperature;
