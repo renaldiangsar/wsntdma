@@ -44,7 +44,7 @@ void loop()
   DateTime now = rtc.now();
   unsigned long currentMillis = millis();
 
-  if (currentMillis % interval >= node11TimeStart && currentMillis % interval <= node11TimeEnd)
+  if (now.second() % 30 >= 0 && now.second() % 30 <= 6)
   {
     float temperature = dht.readTemperature();
     float humidity = dht.readHumidity();
