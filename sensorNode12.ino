@@ -44,7 +44,7 @@ void loop()
   DateTime now = rtc.now();
   unsigned long currentMillis = millis();
 
-  if (currentMillis % interval >= node12TimeStart && currentMillis % interval <= node12TimeEnd)
+  if (now.second() % 30 >= 18 && now.second() % 30 <= 24)
   {
     float temperature = dht.readTemperature();
     float humidity = dht.readHumidity();
@@ -58,9 +58,6 @@ void loop()
     sentData.tandanode = 12;
     sentData.temperature = temperature;
     sentData.humidity = humidity;
-    //sentData.jam = now.hour();
-    //sentData.menit = now.minute();
-    //sentData.detik = now.second();
 
     rf24.write(&sentData, sizeof(sentData));
 
