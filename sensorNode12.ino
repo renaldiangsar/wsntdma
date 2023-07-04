@@ -42,9 +42,9 @@ void setup()
 void loop()
 {
   DateTime now = rtc.now();
-  unsigned long currentMillis = millis();
+  int x = rtc.now().second();
 
-  if (now.second() % 30 >= 18 && now.second() % 30 <= 24)
+  if (x % 30 >= 18 && x % 30 <= 24)
   {
     float temperature = dht.readTemperature();
     float humidity = dht.readHumidity();
