@@ -58,9 +58,6 @@ void loop()
     sentData.tandanode = 11;
     sentData.temperature = temperature;
     sentData.humidity = humidity;
-    //sentData.jam = now.hour();
-    //sentData.menit = now.minute();
-    //sentData.detik = now.second();
 
     rf24.write(&sentData, sizeof(sentData));
 
