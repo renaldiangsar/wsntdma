@@ -57,9 +57,10 @@ void loop()
 {
 
   DateTime now = rtc.now();
+  int x = rtc.now().second();
   unsigned long currentMillis = millis();
 
-  if (now.second() % 30 >= 6 && now.second() % 30 <= 12)
+  if (x % 30 >= 6 && x % 30 <= 12)
   {
     if (!sendDataNode1)
     {
@@ -94,7 +95,7 @@ void loop()
     sendDataNode1 = false;
   }
 
-  if (now.second() % 30 >= 0 && now.second() % 30 <= 6)
+  if (x % 30 >= 0 && x % 30 <= 6)
   {
     rf24.startListening();
     if (rf24.available())
@@ -126,7 +127,7 @@ void loop()
     }
   }
   
-  if (now.second() % 30 >= 6 && now.second() % 30 <= 12)
+  if (x % 30 >= 6 && x % 30 <= 12)
   {
     if(!sendDataNode11)
     {
@@ -155,7 +156,7 @@ void loop()
     sendDataNode11 = false;
   }
        
-  if (now.second() % 30 >= 18 && now.second() % 30 <= 24)
+  if (x % 30 >= 18 && x % 30 <= 24)
   {
     rf24.startListening();
     if (rf24.available())
@@ -186,7 +187,7 @@ void loop()
     }
   }
   
-  if (now.second() % 30 >= 24 && now.second() % 30 <= 30)
+  if (x % 30 >= 24 && x % 30 <= 30)
   {
     if (!sendDataNode12)
     {
