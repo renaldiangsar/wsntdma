@@ -23,9 +23,9 @@ struct data
 
 struct data sentData;
 
-const unsigned long interval = 15000;  // 12 seconds interval
-const unsigned long node12TimeStart = 9000;
-const unsigned long node12TimeEnd = 12000;
+const unsigned long interval = 30000;  // 12 seconds interval
+const unsigned long node12TimeStart = 18000;
+const unsigned long node12TimeEnd = 24000;
 
 void setup()
 {
